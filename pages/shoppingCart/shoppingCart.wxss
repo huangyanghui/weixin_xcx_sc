@@ -1,0 +1,89 @@
+.shoppingCart{
+    padding-bottom: 240rpx;
+}
+/*  */
+.van-cell-group {
+    display: flex;
+    align-items: center;
+    padding: 0 20rpx;
+}
+
+.van-card {
+    background: #fff !important;
+}
+
+.van-swipe-cell__right {
+    height: 100%;
+    width: 130rpx;
+  
+}
+.van-swipe-cell__right view {
+    height: 100%;
+    width: 100%;
+    background: #c00000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28rpx;
+    letter-spacing: 5rpx;
+}
+/*  */
+.bg{
+    height: 8rpx;
+    background-image: linear-gradient(to right , #ff7a7a, #7AFFAF);
+}
+.add_receipt_Info{
+    height: 150rpx;
+    width: 750rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.receipt_Info{
+    background: #fff;
+    padding: 30rpx 20rpx;
+    font-size: 26rpx;
+}
+
+.receipt_Info>view:nth-of-type(1){
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20rpx;
+}
+.receipt_Info>view:nth-of-type(1) .van-icon{
+    margin-left: 10rpx;
+}
+.receipt_Info>view:nth-of-type(1) >view:nth-of-type(2){
+ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*  */
+.sub_box{
+    height: 100rpx;
+    display: flex;
+    padding: 0 20rpx;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 28rpx;
+    background: #fff;
+    position: fixed;
+    bottom: 100rpx;
+    width: 100%;
+    z-index: 99;
+}
+.sub_box>view:nth-of-type(2){
+    display: flex;
+    align-items: center;
+}
+.sub_box>view:nth-of-type(2) .van-button{
+    height: 70rpx;
+    padding: 0 40rpx;
+}
+.sub_box>view:nth-of-type(2) >view:nth-of-type(1){
+    color: red;
+    font-size: 36rpx;
+    margin-right: 20rpx;
+}

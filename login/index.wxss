@@ -1,0 +1,21 @@
+/*  */
+.noLogin{
+    height: 100vh;
+    background: #f4f4f4;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 250rpx;
+}
+.noLogin .van-button{
+   width: 520rpx;
+   height: 80rpx;
+   letter-spacing: 10rpx;
+   margin: 20rpx 0;
+   font-size: 26rpx;
+}
+
+.noLogin text{
+  font-size: 22rpx;
+  color: #999;
+}

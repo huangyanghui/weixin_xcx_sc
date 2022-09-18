@@ -1,0 +1,3 @@
+.list_box .van-card{  
+    margin: 8rpx 0;
+}

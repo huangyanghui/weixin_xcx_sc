@@ -1,0 +1,56 @@
+.steps_box {
+    background: #f4f4f4;
+    position: absolute;
+    top: 480rpx;
+    width: 100vw;
+    left: 0;
+    z-index: 99;
+    border-radius: 20rpx 20rpx 0 0;
+
+}
+.box{
+    height: 107rpx;
+    overflow: hidden;
+    margin-bottom: 18rpx;
+}
+#boxZK{
+    height: auto;
+}
+.wlIfon {
+    background: #ffff;
+    border-bottom: 1px solid rgb(235, 234, 234);
+    border-radius: 20rpx 20rpx 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-start;
+    padding:23rpx;
+}
+.wlIfon .van-icon{
+    font-size: 40rpx;
+}
+.wlIfon .ifon {
+    flex: 1;
+    margin-left: 20rpx;
+    font-size: 28rpx;
+    line-height: 40rpx;
+}
+.wlIfon .ifon .van-button{
+   float: right;
+   width: 74rpx !important;
+   height: 40rpx;
+   font-size: 24rpx;
+   padding: 0;
+}
+.zk{
+  position: absolute;
+  top: 0;
+  right: 0rpx;
+  font-size: 24rpx;
+  box-shadow:0 0 10rpx 10rpx #fff
+}
+.zk .van-icon{
+    font-size: 20rpx;
+}
+.shhzd{
+    position: relative;
+}

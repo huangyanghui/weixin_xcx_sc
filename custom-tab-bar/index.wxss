@@ -1,0 +1,9 @@
+.van-tabbar-item__icon{
+    margin: 0;
+}
+.van-tabbar{
+    height: 100rpx;
+}
+.van-tabbar-item{
+    height: 100rpx;
+}

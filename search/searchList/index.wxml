@@ -1,0 +1,21 @@
+<view class="search_list_box">
+    <search-my  isSearch="{{0}}" bind:onChange="onChange" bind:onClear="onClear"></search-my>
+    <scroll-view scroll-y="true" wx:if="{{suggestion.length}}">
+        <view bindtap="clickItem" data-item="{{item}}" class="suggestion_item" wx:for="{{suggestion}}" wx:key="index">
+            <text>{{item.goods_name}}</text>
+            <van-icon name="arrow" />
+        </view>
+    </scroll-view>
+    <view wx:elif="{{!suggestion.length&&history.length}}" class="historyList">
+        <view class="history_cz">
+            <text>搜索历史</text>
+            <van-icon name="delete" bindtap="delHis" />
+        </view>
+        <van-tag closeable bind:close="onClose" data-index="{{index}}" data-item="{{item}}" bindtap="clickTag" color="#ccc" type="primary" wx:for="{{history}}" wx:key="index" size="large">
+            {{item}}
+        </van-tag>
+    </view>
+    <view wx:else>
+        <empty-box  text="{{'暂无搜索记录'}}"></empty-box>
+    </view>
+</view>

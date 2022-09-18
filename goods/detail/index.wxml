@@ -1,0 +1,33 @@
+<view class="detail_box" wx:if="{{detail.goods_name}}">
+    <swiper indicator-dots 	indicator-active-color="#c00000" circular>
+        <swiper-item wx:for="{{detail.pics}}" wx:key="index" bindtap="clickImge" data-index="{{index}}" >
+            <image src="{{item.pics_big}}"></image>
+        </swiper-item>
+    </swiper>
+    <!--  -->
+    <view class="goodsDetail_box">
+        <view>
+            ￥{{detail.goods_price}}
+        </view>
+        <view>
+            <view>
+                {{detail.goods_name}}
+            </view>
+            <view>
+                <van-icon name="star-o" />
+                <view>收藏</view>
+                <!-- <van-icon name="star" /> -->
+            </view>
+        </view>
+        <view>快递：免运费</view>
+    </view>
+    <!--  -->
+    <rich-text nodes="{{detail.goods_introduce}}"></rich-text>
+    <!--  -->
+    <van-goods-action>
+        <van-goods-action-icon icon="shop-o" text="店铺" />
+        <van-goods-action-icon icon="cart-o" text="购物车"  info="{{commodityNum||null}}" bindtap="goCart"  />
+        <van-goods-action-button text="加入购物车" type="warning" bindtap="addCar" />
+        <van-goods-action-button text="立即购买"  />
+    </van-goods-action>
+</view>

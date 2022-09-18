@@ -1,0 +1,60 @@
+
+.box {
+    height: calc(100vh - 100rpx - 54px);
+    display: flex;
+}
+
+/*  */
+.box>.lf,
+.box>.lf scroll-view {
+    height: 100%;
+
+}
+
+
+/*  */
+.box>.rt {
+    flex: 1;
+    height: 100%;
+
+}
+
+.box>.rt scroll-view {
+    height: 100%;
+    width: 100%;
+
+
+}
+
+.box>.rt .item {
+
+    width: 100%;
+}
+
+.box>.rt .title {
+    text-align: center;
+    line-height: 100rpx;
+    font-weight: bold;
+    font-size: 28rpx;
+}
+
+.box>.rt .mian {
+
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box>.rt .childrenItem {
+    padding: 10rpx 20rpx;
+    width: 33.333%;
+    text-align: center;
+    font-size: 24rpx;
+    
+}
+
+.childrenItem image {
+    width: 100%;
+    height: 150rpx;
+  
+}

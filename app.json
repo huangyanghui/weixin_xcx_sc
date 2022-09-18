@@ -1,0 +1,88 @@
+{
+    "pages": [
+        "pages/home/home",
+        "pages/classify/classify",
+        "pages/shoppingCart/shoppingCart",
+        "pages/personalCenter/personalCenter",
+        "pages/webV/webV"
+    ],
+    "tabBar": {
+        "custom": true,
+        "list": [
+            {
+                "pagePath": "pages/home/home",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/classify/classify",
+                "text": "分类"
+            },
+            {
+                "pagePath": "pages/shoppingCart/shoppingCart",
+                "text": "购物车"
+            },
+            {
+                "pagePath": "pages/personalCenter/personalCenter",
+                "text": "我的"
+            }
+        ]
+    },
+    "subPackages": [
+        {
+            "root": "goods",
+            "pages": [
+                "detail/index",
+                "list/index"
+            ]
+        },
+        {
+            "root": "search",
+            "pages": [
+                "searchList/index"
+            ]
+        },
+        {
+            "root": "login",
+            "pages": [
+                "index"
+            ]
+        },
+        {
+            "root": "orders",
+            "pages": [
+                "index"
+            ]
+        },
+        {
+            "root": "logistics",
+            "pages": [
+                "index"
+            ]
+        }
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#c00000",
+        "navigationBarTitleText": "Weixin",
+        "navigationBarTextStyle": "white"
+    },
+    "sitemapLocation": "sitemap.json",
+    "usingComponents": {
+        "van-divider": "@vant/weapp/divider/index",
+        "van-icon": "@vant/weapp/icon/index",
+        "empty-box":"/components/empty/index",
+        "search-my":"/components/searchMy/index",
+        "van-button": "@vant/weapp/button/index",
+        "van-checkbox": "@vant/weapp/checkbox/index",
+        "van-checkbox-group": "@vant/weapp/checkbox-group/index",
+        "van-dialog": "@vant/weapp/dialog/index",
+        "van-sticky": "@vant/weapp/sticky/index",
+        "van-image": "@vant/weapp/image/index"
+       
+    },
+    "permission": {
+        "scope.userLocation": {
+          "desc": "你的位置信息将用于小程序位置接口的效果展示" 
+        }
+      }
+}

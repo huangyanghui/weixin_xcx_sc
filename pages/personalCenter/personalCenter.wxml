@@ -1,0 +1,42 @@
+<view class="personalCenter_box" >
+    <view class="avatar_box">
+        <van-image round width="170rpx" height="170rpx" src="{{userInfo.avatarUrl}}" />
+        <view>{{userInfo.nickName}}</view>
+    </view>
+    <view class="mian_box">
+        <view class="tab_box">
+            <view>
+                <view>8</view>
+                <view>收藏的店铺</view>
+            </view>
+            <view>
+                <view>8</view>
+                <view>收藏的商品</view>
+            </view>
+            <view>
+                <view>8</view>
+                <view>关注的商品</view>
+            </view>
+            <view>
+                <view>109</view>
+                <view>足迹</view>
+            </view>
+
+        </view>
+        <view class="orders_box">
+            <van-cell title="我的订单" />
+            <view>
+                <view data-item="{{item}}" bindtap="clickOrders" wx:for="{{ordersList}}" wx:key="index">
+                    <image src='{{item.ic}}'></image>
+                    <view>{{item.text}}</view>
+                </view>
+               
+            </view>
+        </view>
+        <view class="cz_box">
+            <van-cell title="收货地址" is-link bind:click="clickAddReceiptInfo" />
+            <van-cell bindtap="gobaidu" title="百度" is-link />
+            <van-cell title="退出登录" is-link bind:click="quit" />
+        </view>
+    </view>
+</view>

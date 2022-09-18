@@ -1,0 +1,7 @@
+<van-sticky>
+    <view class="tabMy_box">
+        <view bindtap="clickItem" data-index="{{index}}" class="{{index==ids?'thisTab':null}}" wx:for="{{tabList}}" wx:key="index">
+            {{item.text}}
+        </view>
+    </view>
+</van-sticky>

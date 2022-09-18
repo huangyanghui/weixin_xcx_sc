@@ -1,0 +1,22 @@
+<view class="tabBar_box">
+    <search-my></search-my>
+    <swiper autoplay circular indicator-dots indicator-active-color="#c00000">
+        <swiper-item wx:for="{{swiperList}}" wx:key="index">
+            <navigator url="{{'/goods/detail/index?goods_id=' + item.goods_id}}" open-type="navigate">
+                <image mode="widthFix" src="{{item.image_src}}"></image>
+            </navigator>
+        </swiper-item>
+    </swiper>
+    <van-grid column-num="4" border="{{ false }}">
+        <van-grid-item use-slot wx:for="{{ catitemsList }}" wx:key="index">
+            <image style="width: 130rpx; height: 130rpx;" src="{{item.image_src}}" />
+        </van-grid-item>
+    </van-grid>
+
+    <view class="mian" wx:for="{{floordataList}}" wx:key="item">
+        <view class="{{index==0?'first mian_item': 'mian_item'}}" wx:for="{{item.product_list}}" wx:key="index">
+            <image src="{{item.image_src}}" bindtap="clickFloor" data-item="{{item}}"></image>
+        </view>
+    </view>
+    
+</view>

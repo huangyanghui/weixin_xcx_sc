@@ -1,0 +1,6 @@
+<view class="noLogin">
+    <van-image round width="170rpx" height="170rpx" src="/images/toux.png" />
+    
+    <van-button bindtap="goLogin" color="#c00000" type="danger"  round>一键登录</van-button>
+    <text>登录后尽享更多权益</text>
+</view>

@@ -1,0 +1,5 @@
+<view class="empty_box">
+    <image src="https://img01.yzcdn.cn/vant/empty-image-default.png"></image>
+    <text>{{text}}</text>
+    
+</view>

@@ -1,0 +1,15 @@
+.empty_box{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+.empty_box text{
+    color: #ccc;
+    font-size: 30rpx;
+    margin-top: 15rpx;
+}
+.empty_box image{
+    width: 500rpx;
+    height: 500rpx;
+}

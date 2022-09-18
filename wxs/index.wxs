@@ -1,0 +1,24 @@
+function setPrice(value) {
+    return value + '.00';
+}
+function setState(value) {
+    var str = ''
+    if (value == 1) {
+        str = '等待买家付款'
+    } else if (value == 2) {
+        str = '等待卖家发货'
+    } else if (value == 3) {
+        str = '卖家已发货'
+    } else if (value == 4) {
+        str = '退款/退货'
+    }
+    if (value == 5) {
+        str = "交易成功"
+    }
+
+    return str
+}
+module.exports = {
+    setPrice: setPrice,
+    setState: setState,
+}

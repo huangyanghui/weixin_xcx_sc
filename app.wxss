@@ -1,0 +1,12 @@
+
+view,scroll-view{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.tabBar_box{
+    padding-bottom: 110rpx;
+}
+page{
+    --topicColor:#c00000
+}

@@ -1,0 +1,38 @@
+<view class="box">
+    <tabMy ids="{{ids}}" tabList="{{tabList}}" bind:tabClick="tabClick"></tabMy>
+    <view class="mian_box">
+        <view wx:for="{{list}}" wx:key="index" class="item">
+            <view class="dp">
+                <view>
+                 <image src="../images/inspection.png"></image>   茹数白旗舰店 <van-icon name="arrow" />
+                </view>
+                <view>
+                   {{wxs.setState(item.state)}}
+                </view>
+            </view>
+            <view>
+                <image src="{{item.goods_big_logo||'https://img01.yzcdn.cn/vant/cat.jpeg'}}"></image>
+                <view>
+                    <view class="name_box">
+                        <text>{{item.goods_name}}</text>
+                        <text>￥{{item.goods_price}}</text>
+                    </view>
+
+                    <view class="type_box">
+                        <text>{{item.type}}</text>
+                        <text>x{{item.goods_number}}</text>
+                    </view>
+                </view>
+            </view>
+            <view>
+                
+                <van-button data-item="{{item}}" wx:if="{{item.state==3||item.state==5}}" color="#666" size="small" round  plain hairline type="primary" bindtap="logistics">查看物流</van-button>
+                <van-button wx:if="{{item.state==2}}" color="#666" size="small" round  plain hairline type="primary">提醒卖家发货</van-button>
+                <van-button wx:if="{{item.state==4}}" color="#666" size="small" round  plain hairline type="primary">删除订单</van-button>
+                <van-button wx:if="{{item.state==1}}" color="#666" size="small" round  plain hairline type="primary">找朋友付</van-button>
+                <van-button wx:if="{{item.state==1}}" color="#c00000" size="small" round  plain hairline type="primary">继续付款</van-button>
+            </view>
+        </view>
+    </view>
+</view>
+<wxs module="wxs" src='../wxs/index.wxs'></wxs>

@@ -1,0 +1,56 @@
+<view class="shoppingCart " wx:if="{{carArr.length}}">
+    <view class="receipt_Info" bindtap="clickAddReceiptInfo" wx:if="{{receiptTnfo.userName}}">
+        <view>
+            <view>收货人：{{receiptTnfo.userName}}</view>
+            <view>电话：{{receiptTnfo.telNumber}}
+                <van-icon name="arrow" />
+            </view>
+        </view>
+        <view>
+            收货地址：{{receiptTnfo.provinceName}}{{receiptTnfo.cityName}}{{receiptTnfo.countyName}}{{receiptTnfo.detailInfo}}
+        </view>
+    </view>
+    <view class="add_receipt_Info" wx:else >
+        <van-button bindtap="clickAddReceiptInfo" type="primary" size="small">请选择收货地址+</van-button>
+    </view>
+    <view class="bg"></view>
+    <view>
+        <van-swipe-cell async-close data-index="{{index}}" bind:close="onClose" wx:for="{{carArr}}" wx:key="index" right-width="{{ 65 }}">
+            <van-cell-group>
+                <van-checkbox bind:change="onChange" data-index="{{index}}" checked-color="#c00000" value="{{ item.flag }}"></van-checkbox>
+                <van-card price="{{wxs.setPrice(item.goods_price)}}" desc="{{item.goods_name}}" thumb="{{ item.goods_big_logo||'https://img01.yzcdn.cn/vant/cat.jpeg'}}">
+                    <view slot="footer">
+                        <van-stepper data-index="{{index}}" bind:change="clickCarNum" value="{{ item.carNum }}" min="1" max="99" disable-input />
+                    </view>
+                </van-card>
+            </van-cell-group>
+            <view slot="right">
+                <view>
+                    删除
+                </view>
+            </view>
+        </van-swipe-cell>
+    </view>
+    <van-dialog id="van-dialog" />
+    <!--  -->
+    <view class="sub_box">
+        <view>
+            <van-checkbox bind:change="onAllChange" checked-color="#c00000" value="{{ allIf }}">全选</van-checkbox>
+        </view>
+        <view>
+            合计:
+            <view>
+                ￥{{total}}
+            </view>
+            <view>
+                <van-button bindtap="clickSub" color="linear-gradient(to right,#ff6034,#ee0a24)" type="danger" round>结算({{flagTrueNum}})</van-button>
+            </view>
+        </view>
+
+    </view>
+
+</view>
+<view wx:else>
+    <empty-box text="{{'暂无商品，快点去添加吧'}}"></empty-box>
+</view>
+<wxs module="wxs" src='../../wxs/index.wxs'></wxs>

@@ -1,0 +1,25 @@
+<search-my></search-my>
+<view class="box">
+    <view class="lf">
+        <scroll-view scroll-y="true">
+            <van-sidebar active-key="{{ active }}" bind:change="onChange">
+                <van-sidebar-item wx:for="{{categoriesList}}" title="{{item.cat_name}}" />
+            </van-sidebar>
+        </scroll-view>
+    </view>
+    <view class="rt">
+        <scroll-view scroll-y="true" scroll-top="{{scrollTop}}">
+            <view class="item" wx:for="{{SecondaryHeadings.children}}" wx:key="index">
+                <view class="title">/ {{item.cat_name}} /</view>
+                <view class="mian">
+                    <view class="childrenItem" bindtap="clickChildrenItem" data-item="{{childrenItem}}" wx:for="{{item.children}}" wx:for-item="childrenItem" wx:for-index="childrenIndex" wx:key="childrenIndex">
+                        <image src="{{childrenItem.cat_icon}}"></image>
+                        <text>{{childrenItem.cat_name}}</text>
+
+                    </view>
+                </view>
+            </view>
+            <van-divider wx:if="{{isDivider}}"  contentPosition="center">没有更多了</van-divider>
+        </scroll-view>
+    </view>
+</view>

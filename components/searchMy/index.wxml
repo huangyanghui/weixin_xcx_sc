@@ -1,0 +1,5 @@
+<van-sticky >
+    <view class="top_search"  >
+        <van-search  value="{{value}}" bind:clear="onClear" bind:change="onChange" focus="{{!isSearch}}" disabled="{{isSearch}}" bindtap="onClick" background="none" shape="round" placeholder="请输入搜索关键词" />
+    </view>
+</van-sticky>

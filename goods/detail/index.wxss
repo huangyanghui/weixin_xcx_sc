@@ -1,0 +1,66 @@
+.detail_box{
+    padding-bottom: 135rpx;
+}
+.detail_box .van-goods-action{
+    height: 118rpx;
+
+}
+/*  */
+.detail_box swiper{
+    height: 750rpx;
+}
+.detail_box swiper image{
+  width: 100%;
+  height: 100%;
+}
+
+/*  */
+.detail_box .goodsDetail_box{
+    padding: 10rpx 10rpx 20rpx;
+   
+}
+.detail_box .goodsDetail_box>view:nth-of-type(1){
+   
+    color: red;
+    font-size: 40rpx;
+   
+}
+/*  */
+.detail_box .goodsDetail_box>view:nth-of-type(2){
+   display: flex;
+   margin: 10rpx 0;
+}
+.detail_box .goodsDetail_box>view:nth-of-type(2)>view:nth-of-type(1){
+   font-size: 30rpx;
+   display: block;
+   flex: 1;
+   display: -webkit-box;
+  overflow: hidden;  
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.detail_box .goodsDetail_box>view:nth-of-type(2)>view:nth-of-type(2){
+    width: 100rpx;
+    border-left: 1px solid #cacaca;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 10rpx;
+    
+
+}
+.detail_box .goodsDetail_box>view:nth-of-type(2)>view:nth-of-type(2) .van-icon{
+   font-size: 40rpx;
+   color: #999;
+}
+.detail_box .goodsDetail_box>view:nth-of-type(2)>view:nth-of-type(2)>view{
+    font-size: 28rpx;
+    color: #999;
+    margin-top: 10rpx;
+}
+/*  */
+.detail_box .goodsDetail_box>view:nth-of-type(3){
+    font-size: 27rpx;
+    color: #999;
+ }

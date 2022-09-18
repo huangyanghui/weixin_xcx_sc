@@ -1,0 +1,19 @@
+.tabMy_box{
+    display: flex;
+    height: 100rpx;
+   
+    align-items: center;
+    background: #f4f4f4;
+    padding: 0 25rpx;
+    font-size: 28rpx;
+    justify-content: space-between;
+}
+.tabMy_box view{
+    flex: 1;
+    text-align: center;
+}
+.tabMy_box  .thisTab{
+    color: #c00000;
+    font-size: 31rpx;
+    font-weight: bold;
+}

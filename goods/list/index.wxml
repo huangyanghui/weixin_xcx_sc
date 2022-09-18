@@ -1,0 +1,6 @@
+<view class="list_box">
+    <van-card data-item="{{item}}" bindtap="clickItem" wx:for="{{list}}" wx:key="index" price="{{wxs.setPrice(item.goods_price)}}" desc="{{item.goods_name}}" thumb="{{ item.goods_big_logo||'https://img01.yzcdn.cn/vant/cat.jpeg'}}" />
+    <van-divider wx:if="{{more}}" contentPosition="center">没有更多</van-divider>
+    <empty-box wx:if="{{noData}}" text="{{'暂无商品'}}"></empty-box>
+</view>
+<wxs module="wxs" src='../../wxs/index.wxs'></wxs>

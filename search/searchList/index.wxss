@@ -1,0 +1,36 @@
+.search_list_box {
+
+    height: 100vh;
+}
+
+scroll-view {
+    height: calc(100% - 50px);
+}
+
+.suggestion_item {
+    border-bottom: 1px solid #cacaca;
+    line-height: 80rpx;
+    padding: 0 20rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.suggestion_item text {
+    font-size: 26rpx;
+    width: 670rpx;
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.historyList .van-tag{
+    margin: 10rpx;
+}
+.history_cz{
+    padding:20rpx 10rpx;
+    border-bottom: 1px solid #cacaca;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 28rpx;
+}

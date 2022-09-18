@@ -1,0 +1,29 @@
+<view wx:if="{{!Loading}}">
+    <van-sticky>
+        <view class="map_box" style="width: 750rpx; height: 550rpx;">
+            <map id="map" name="citymap" longitude="{{longitude}}" latitude="{{latitude}}" polyline="{{polyline}}" markers="{{markers}}" scale="3"  style="width: 750rpx; height: 550rpx;">
+
+            </map>
+        </view>
+    </van-sticky>
+
+    <view class="steps_box">
+        <view class="box" id="{{ifZK?'boxZK':null}}">
+            <view class="wlIfon">
+                <van-icon name="logistics" />
+                <view class="ifon">
+
+                    <view>订单编号:{{wlInfo.ddh}} <van-button type="default" bindtap="fz">复制</van-button>
+                    </view>
+                    <view class="shhzd">收货地址:{{wlInfo.shhzd}} <view bindtap="clickZk" wx:if="{{!ifZK}}" class="zk">展开
+                            <van-icon name="arrow-down" />
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <van-steps active-color="#c00000" direction="vertical" steps="{{ wlInfo.steps }}" active="{{ 0 }}" />
+    </view>
+
+    <van-dialog id="van-dialog" />
+</view>

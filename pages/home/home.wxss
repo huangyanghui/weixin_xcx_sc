@@ -1,0 +1,50 @@
+
+/*  */
+swiper {
+
+    height: 340rpx;
+}
+
+swiper image {
+    width: 100%;
+}
+
+/*  */
+.van-grid {
+    height: 170rpx;
+    padding: 0;
+}
+
+.van-grid .van-grid-item__content {
+    padding: 0 !important;
+    height: 100%;
+
+}
+
+.van-grid .van-grid-item {
+    height: 100%;
+}
+
+/*  */
+.mian {
+    height: 350rpx;
+    padding: 0 5rpx;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10rpx;
+    grid-template-areas: 'a c b '
+        'a c b';
+}
+
+view.mian:nth-of-type(3) {
+    margin: 20rpx 0;
+}
+.mian_item image{
+  width: 100%;
+  height: 100%;
+}
+
+.first {
+    grid-area: a;
+}

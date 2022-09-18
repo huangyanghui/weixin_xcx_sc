@@ -1,0 +1,3 @@
+.top_search {
+    background: var(--topicColor);
+}
